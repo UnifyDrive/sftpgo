@@ -1,0 +1,412 @@
+{
+  "acme": {
+    "ca_endpoint": "https://acme-v02.api.letsencrypt.org/directory",
+    "certs_path": "certs",
+    "domains": [],
+    "email": "",
+    "http01_challenge": {
+      "port": 80,
+      "proxy_header": "",
+      "webroot": ""
+    },
+    "key_type": "4096",
+    "renew_days": 30,
+    "tls_alpn01_challenge": {
+      "port": 0
+    }
+  },
+  "command": {
+    "commands": [],
+    "env": [],
+    "timeout": 30
+  },
+  "common": {
+    "actions": {
+      "execute_on": [],
+      "execute_sync": [],
+      "hook": ""
+    },
+    "allow_self_connections": 0,
+    "allowlist_status": 0,
+    "data_retention_hook": "",
+    "defender": {
+      "ban_time": 30,
+      "ban_time_increment": 50,
+      "driver": "memory",
+      "enabled": false,
+      "entries_hard_limit": 150,
+      "entries_soft_limit": 100,
+      "observation_time": 30,
+      "score_invalid": 2,
+      "score_limit_exceeded": 3,
+      "score_no_auth": 0,
+      "score_valid": 1,
+      "threshold": 15
+    },
+    "idle_timeout": 15,
+    "max_per_host_connections": 20,
+    "max_total_connections": 0,
+    "post_connect_hook": "",
+    "post_disconnect_hook": "",
+    "proxy_allowed": [],
+    "proxy_protocol": 0,
+    "proxy_skipped": [],
+    "rate_limiters": [
+      {
+        "average": 0,
+        "burst": 1,
+        "entries_hard_limit": 150,
+        "entries_soft_limit": 100,
+        "generate_defender_events": false,
+        "period": 1000,
+        "protocols": [
+          "DAV",
+          "FTP",
+          "HTTP",
+          "SSH"
+        ],
+        "type": 2
+      }
+    ],
+    "rename_mode": 0,
+    "setstat_mode": 0,
+    "startup_hook": "",
+    "temp_path": "",
+    "upload_mode": 0
+  },
+  "data_provider": {
+    "actions": {
+      "execute_for": [],
+      "execute_on": [],
+      "hook": ""
+    },
+    "backups_path": "backups",
+    "check_password_hook": "",
+    "check_password_scope": 0,
+    "client_cert": "",
+    "client_key": "",
+    "connection_string": "",
+    "create_default_admin": true,
+    "delayed_quota_update": 0,
+    "disable_sni": false,
+    "driver": "sqlite",
+    "external_auth_hook": "/zspace/applications/services/zfileshare/checkPwd.sh",
+    "external_auth_scope": 0,
+    "host": "",
+    "is_shared": 0,
+    "name": "sqlite.db",
+    "naming_rules": 5,
+    "node": {
+      "host": "",
+      "port": 0,
+      "proto": "http"
+    },
+    "password": "",
+    "password_caching": true,
+    "password_hashing": {
+      "algo": "bcrypt",
+      "argon2_options": {
+        "iterations": 1,
+        "memory": 65536,
+        "parallelism": 2
+      },
+      "bcrypt_options": {
+        "cost": 10
+      }
+    },
+    "password_validation": {
+      "admins": {
+        "min_entropy": 0
+      },
+      "users": {
+        "min_entropy": 0
+      }
+    },
+    "pool_size": 0,
+    "port": 0,
+    "post_login_hook": "",
+    "post_login_scope": 0,
+    "pre_login_hook": "",
+    "root_cert": "",
+    "sql_tables_prefix": "",
+    "sslmode": 0,
+    "target_session_attrs": "",
+    "track_quota": 2,
+    "update_mode": 0,
+    "username": "",
+    "users_base_dir": ""
+  },
+  "ftpd": {
+    "active_transfers_port_non_20": true,
+    "banner": "",
+    "banner_file": "",
+    "bindings": [
+      {
+        "active_connections_security": 0,
+        "address": "127.0.0.1",
+        "apply_proxy_config": true,
+        "certificate_file": "",
+        "certificate_key_file": "",
+        "client_auth_type": 0,
+        "debug": false,
+        "force_passive_ip": "",
+        "min_tls_version": 12,
+        "passive_connections_security": 0,
+        "passive_host": "",
+        "passive_ip_overrides": [],
+        "port": 0,
+        "tls_cipher_suites": [],
+        "tls_mode": 0
+      }
+    ],
+    "ca_certificates": [],
+    "ca_revocation_lists": [],
+    "certificate_file": "",
+    "certificate_key_file": "",
+    "combine_support": 0,
+    "disable_active_mode": false,
+    "enable_site": false,
+    "hash_support": 0,
+    "passive_port_range": {
+      "end": 50100,
+      "start": 50000
+    }
+  },
+  "http": {
+    "ca_certificates": [],
+    "certificates": [],
+    "headers": [],
+    "retry_max": 3,
+    "retry_wait_max": 30,
+    "retry_wait_min": 2,
+    "skip_tls_verify": false,
+    "timeout": 20
+  },
+  "httpd": {
+    "bindings": [
+      {
+        "address": "127.0.0.1",
+        "branding": {
+          "web_admin": {
+            "default_css": "",
+            "disclaimer_name": "",
+            "disclaimer_path": "",
+            "extra_css": [],
+            "favicon_path": "",
+            "login_image_path": "",
+            "logo_path": "",
+            "name": "",
+            "short_name": ""
+          },
+          "web_client": {
+            "default_css": "",
+            "disclaimer_name": "",
+            "disclaimer_path": "",
+            "extra_css": [],
+            "favicon_path": "",
+            "login_image_path": "",
+            "logo_path": "",
+            "name": "",
+            "short_name": ""
+          }
+        },
+        "certificate_file": "",
+        "certificate_key_file": "",
+        "client_auth_type": 0,
+        "client_ip_header_depth": 0,
+        "client_ip_proxy_header": "",
+        "enable_https": false,
+        "enable_rest_api": true,
+        "enable_web_admin": true,
+        "enable_web_client": false,
+        "enabled_login_methods": 0,
+        "hide_login_url": 0,
+        "min_tls_version": 12,
+        "oidc": {
+          "client_id": "",
+          "client_secret": "",
+          "config_url": "",
+          "custom_fields": [],
+          "debug": false,
+          "implicit_roles": false,
+          "insecure_skip_signature_check": false,
+          "redirect_base_url": "",
+          "role_field": "",
+          "scopes": [
+            "email",
+            "openid",
+            "profile"
+          ],
+          "username_field": ""
+        },
+        "port": 8042,
+        "proxy_allowed": [],
+        "render_openapi": true,
+        "security": {
+          "allowed_hosts": [],
+          "allowed_hosts_are_regex": false,
+          "content_security_policy": "",
+          "content_type_nosniff": false,
+          "cross_origin_opener_policy": "",
+          "enabled": false,
+          "expect_ct_header": "",
+          "hosts_proxy_headers": [],
+          "https_host": "",
+          "https_proxy_headers": [],
+          "https_redirect": false,
+          "permissions_policy": "",
+          "sts_include_subdomains": false,
+          "sts_preload": false,
+          "sts_seconds": 0
+        },
+        "tls_cipher_suites": [],
+        "web_client_integrations": []
+      }
+    ],
+    "ca_certificates": [],
+    "ca_revocation_lists": [],
+    "certificate_file": "",
+    "certificate_key_file": "",
+    "cors": {
+      "allow_credentials": false,
+      "allow_private_network": false,
+      "allowed_headers": [],
+      "allowed_methods": [],
+      "allowed_origins": [],
+      "enabled": false,
+      "exposed_headers": [],
+      "max_age": 0,
+      "options_passthrough": false,
+      "options_success_status": 0
+    },
+    "hide_support_link": false,
+    "max_upload_file_size": 0,
+    "openapi_path": "openapi",
+    "setup": {
+      "installation_code": "",
+      "installation_code_hint": "Installation code"
+    },
+    "signing_passphrase": "",
+    "static_files_path": "static",
+    "templates_path": "templates",
+    "token_validation": 0,
+    "web_root": ""
+  },
+  "kms": {
+    "secrets": {
+      "master_key": "",
+      "master_key_path": "",
+      "url": ""
+    }
+  },
+  "mfa": {
+    "totp": [
+      {
+        "algo": "sha1",
+        "issuer": "tdx",
+        "name": "Default"
+      }
+    ]
+  },
+  "plugins": [],
+  "sftpd": {
+    "banner": "",
+    "bindings": [
+      {
+        "address": "127.0.0.1",
+        "apply_proxy_config": false,
+        "port": 2022
+      }
+    ],
+    "ciphers": [],
+    "enabled_ssh_commands": [
+      "cd",
+      "md5sum",
+      "pwd",
+      "scp",
+      "sha1sum",
+      "sha256sum"
+    ],
+    "folder_prefix": "",
+    "host_certificates": [],
+    "host_key_algorithms": [],
+    "host_keys": [],
+    "kex_algorithms": [],
+    "keyboard_interactive_auth_hook": "",
+    "keyboard_interactive_authentication": true,
+    "login_banner_file": "",
+    "macs": [],
+    "max_auth_tries": 0,
+    "moduli": [],
+    "password_authentication": true,
+    "revoked_user_certs_file": "",
+    "trusted_user_ca_keys": []
+  },
+  "smtp": {
+    "auth_type": 0,
+    "domain": "",
+    "encryption": 0,
+    "from": "",
+    "host": "",
+    "password": "",
+    "port": 25,
+    "templates_path": "templates",
+    "user": ""
+  },
+  "telemetry": {
+    "auth_user_file": "",
+    "bind_address": "127.0.0.1",
+    "bind_port": 0,
+    "certificate_file": "",
+    "certificate_key_file": "",
+    "enable_profiler": false,
+    "min_tls_version": 12,
+    "tls_cipher_suites": []
+  },
+  "webdavd": {
+    "bindings": [
+      {
+        "address": "127.0.0.1",
+        "certificate_file": "",
+        "certificate_key_file": "",
+        "client_auth_type": 0,
+        "client_ip_header_depth": 0,
+        "client_ip_proxy_header": "",
+        "disable_www_auth_header": false,
+        "enable_https": false,
+        "min_tls_version": 12,
+        "port": 0,
+        "prefix": "",
+        "proxy_allowed": [],
+        "tls_cipher_suites": []
+      }
+    ],
+    "ca_certificates": [],
+    "ca_revocation_lists": [],
+    "cache": {
+      "mime_types": {
+        "custom_mappings": [],
+        "enabled": true,
+        "max_size": 1000
+      },
+      "users": {
+        "expiration_time": 0,
+        "max_size": 50
+      }
+    },
+    "certificate_file": "",
+    "certificate_key_file": "",
+    "cors": {
+      "allow_credentials": false,
+      "allow_private_network": false,
+      "allowed_headers": [],
+      "allowed_methods": [],
+      "allowed_origins": [],
+      "enabled": false,
+      "exposed_headers": [],
+      "max_age": 0,
+      "options_passthrough": false,
+      "options_success_status": 0
+    }
+  }
+}
